@@ -44,6 +44,14 @@ async function formFieldValidations() {
     // if(!emailField){console.log("Email field is not present")}else{console.log("Email field exists...")}
     emailField ? console.log("Email field exists...") : console.log("Email field is not present");
 
+    // -----------------------------------------------------------
+    //using the label to find out and validate
+    const labelGender =  await driver.findElements(By.id('genterWrapper','label'))
+    console.log("the length is "+labelGender.length);
+
+
+    // ------------------------------------------------------------
+
     //Gender -Male
     await driver.wait(until.elementLocated(By.xpath("//div[@id='genterWrapper']/div[2]//input[@value='Male']")), 10000);
     const maleField = await driver.findElement(By.xpath("//div[@id='genterWrapper']/div[2]//input[@value='Male']"))
