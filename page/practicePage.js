@@ -3,8 +3,8 @@ const fs = require('fs');
 const getbaseUrl = require('../config/baseUrl');
 const maximizeWindowBrowser = require('../helper/helper');
 
-const config = getbaseUrl();          // ✅ Call the function
-console.log(config.baseUrl);         // ✅ Correct way to access the property
+const config = getbaseUrl();          // Call the function
+console.log(config.baseUrl);         // Correct way to access the property
 let driver;
 async function setupDriver() {
     driver = await new Builder().forBrowser('chrome').build();
